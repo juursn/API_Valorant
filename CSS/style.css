@@ -1,0 +1,274 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--font-principal);
+}
+
+:root {
+  /* Cor principal da Riot / Valorant */
+  --color-primary: #ff4655;
+  --color-primary-hover: #bd3944;
+  --color-primary-dark: #53212b;
+
+  /* Fundos */
+  --color-bg-main: #0f1923;
+  --color-bg-secondary: #111823;
+  --color-card: #1f2731;
+  --color-border: #232b35;
+
+  /* Textos */
+  --color-text-main: #ece8e1;
+  --color-text-secondary: #a0a0a0;
+
+  /* Fontes */
+  --title:'Rajdhani';
+  --font-principal: 'Inter', Arial, Helvetica, sans-serif; 
+
+  /* Cor de apoio */
+  --color-accent-soft: #ffd166;
+}
+
+body{
+    background-color: var(--color-bg-secondary);
+}
+
+/* BARRA DE NAVEGAÇÂO */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+    padding: 0 18px;
+    margin-bottom: 34px;
+
+    background-color: var(--color-bg-main);
+    border-bottom: 2px solid var(--color-border);
+
+    text-transform: uppercase;
+    letter-spacing:1.5px;
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+nav ul > li{
+    list-style: none;
+    font-size: 13px;
+    transition: .5s;
+}
+nav ul > li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+
+main{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 0 4rem;
+
+    column-gap: 20px;
+}
+
+/* SEÇÂO DE SELEÇÂO DE AGENTES */
+
+#selecao-agent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 60px;
+    padding: 14px 0 ;
+    gap: 14px;
+
+    background-color: var(--color-bg-secondary);
+    font-weight: 400;
+}
+
+/* Caixa de pesquisa */
+#selecao-agent #search{
+    height: 100%;
+    width: 100%;
+
+    border: none;
+    outline: none;
+    padding:0 12px;
+    margin-left: 16px;
+    border-radius: 12px;
+
+    background-color: var(--color-border);
+    color: var(--color-text-secondary);
+}
+#selecao-agent select:focus,#search:focus{
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-dark);
+}
+
+/* Botão de pesquisa */
+#selecao-agent #search-agent{
+    height: 100%;
+    padding: 0 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+/* SEÇÃO DE CATÁLOGO */
+#catalogo-agents {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 80vh;
+    gap: 18px;
+    border-right: 2px solid var(--color-border);
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ff4655 transparent; /* Firefox */
+}
+
+#catalogo-agents h1{
+    text-align: center;
+    font-family: var(--title);
+    font-size: clamp(2rem,5vw,3.3rem);
+    text-transform: uppercase;
+    color: var(--color-primary);
+
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.agent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;  
+      
+    width: 200px;
+    height: 250px;
+
+    border-radius: 12px;
+    box-shadow: 0 0 0 2px var(--color-primary-dark);
+
+    background-color: var(--color-card);
+    text-align: center;
+
+    transition: .4s ease;
+}
+.agent:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 3px 3px var(--color-primary-hover) ;
+}
+.agent img{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.agent h2{
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--color-primary);
+
+    font-family: var(--title);
+    color: var(--color-text-main);
+}
+
+/* FOTO + NOME DO AGENTE */
+
+#agent-photo{
+    width: 100%;
+}
+
+#agent-photo img{
+    width: 100%;
+    height:max-content;
+
+    background-image: url(https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* DESCRIÇÃO DO AGENTE */
+
+#information-section{
+    display: flex;
+    justify-content: center;
+    
+
+    width: 100%;
+    height: 100%;
+    padding: 28px;
+
+    background-color: var(--color-card);
+    border-radius: 14px;
+
+}
+
+#person h1{
+    font-family: var(--title);
+    font-size: clamp(2rem,5vw,3.3rem);
+    color: var(--color-text-main);
+    margin-bottom: 15px;
+}
+#person h2{
+    padding: 20px 0;
+    color: var(--color-text-main);
+}
+
+#person #description{
+    width: 75%;
+
+    text-align: justify;
+    color: var(--color-text-secondary);
+}
+
+.box-info{
+    width: 100px;
+    padding: 10px;
+
+    text-align: center;
+    border: 2px solid var(--color-primary);
+    border-radius: 14px;
+
+    transition: .5s;
+}
+
+.box-info img{
+    width: 50px;
+}
+.box-info #text-funcao{
+    padding-top: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text-main);
+}
+#habilidades{
+    display: flex;
+    gap: 12px;
+}
