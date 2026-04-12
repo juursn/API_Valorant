@@ -76,7 +76,6 @@ nav ul > li:hover{
     text-decoration-thickness: 3px;
 }
 
-
 main{
     display: grid;
     grid-auto-flow: row;
@@ -200,6 +199,16 @@ main{
 
 #agent-photo{
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#agent-photo img{
+    width: 100%;
+    height: max-content;
+    display: block;
+    background: none !important;
 }
 
 #agent-photo img{
@@ -271,4 +280,13 @@ main{
 #habilidades{
     display: flex;
     gap: 12px;
+}
+
+.txt-hab {
+    padding-top: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text-main);
 }
