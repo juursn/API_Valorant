@@ -1,97 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Agentes do Valorant</title>
-</head>
-<body>
-    <header>
-        <img src="IMG/Valorant5.png" alt="Icone do valorant">
-    </header>
+	<head>
+		<!-- Configuração base + CSS + favicon -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		<title>Agentes do Valorant</title>
+	</head>
+	<body>
+		<!-- Header com logo -->
+		<header>
+			<img src="IMG/Valorant5.png" alt="Icone do valorant" />
+		</header>
 
-    <main>
-        <section id="agent-section">
-            <aside id="selecao-agent">
-                <input type="search" id="search" placeholder="Digite o nome do agente">
-                <button id="search-agent"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </aside>
-            <section id="catalogo-agents">
-                <h1>Agentes</h1>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-                <div class="agent">
-                    <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png" alt="Gekko">
-                    <h2>Gekko</h2>
-                </div>
-            </section>
-            
-        </section>
-        <section id="agent-photo">
-            <img src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png" alt="">
-        </section>
-        <section id="information-section">
-            <div id="person">
-                <h1>Gekko</h1>
-                <p id="description">Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again.</p>
+		<main>
+			<!-- Área principal: busca + lista de agentes -->
+			<section id="agent-section">
+				<!-- Campo de busca -->
+				<aside id="selecao-agent">
+					<input
+						type="search"
+						id="search"
+						placeholder="Digite o nome do agente"
+					/>
+					<button id="search-agent">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</aside>
 
-                <h2>Função</h2>
-                <div class="box-info">
-                    <img src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png" alt="" id="img-funcao">
-                    <p id="text-funcao">INICIADOR</p>
-                </div>
+				<!-- Catálogo de agentes -->
+				<section id="catalogo-agents">
+					<h1>Agentes</h1>
 
-                <h2>Habilidades</h2>
-                <div id="habilidades">
-                    <div class="box-info">
-                        <img src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png" alt="" id="img-hab1">
-                        <p id="text-hab1" class="txt-hab">WIGMAN</p>
-                    </div>
-                    <div class="box-info">
-                        <img src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png" alt="" id="img-hab2">
-                        <p id="text-hab2" class="txt-hab">DIZZY</p>
-                    </div>
-                    <div class="box-info">
-                        <img src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png" alt="" id="img-hab3">
-                        <p id="text-hab3" class="txt-hab">MOSH PIT</p>
-                    </div>
-                    <div class="box-info">
-                        <img src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png" alt="" id="img-hab4">
-                        <p id="text-hab4" class="txt-hab">TRASH</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="JS/script.js" defer></script>
-    <script src="https://kit.fontawesome.com/72ef3aac6d.js" crossorigin="anonymous"></script>
-</body>
+					<!-- Card dos agentes -->
+					<div class="agent">
+						<img
+							src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png"
+							alt="Gekko"
+						/>
+						<h2>Gekko</h2>
+					</div>
+				</section>
+			</section>
+
+			<!-- Imagem grande do agente -->
+			<section id="agent-photo">
+				<img
+					src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+					alt=""
+				/>
+			</section>
+
+			<!-- Informações detalhadas -->
+			<section id="information-section">
+				<div id="person">
+					<!-- Nome + descrição -->
+					<h1>Gekko</h1>
+					<p id="description">
+						Gekko the Angeleno leads a tight-knit crew of calamitous
+						creatures...
+					</p>
+
+					<!-- Função do agente -->
+					<h2>Função</h2>
+					<div class="box-info">
+						<img
+							src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png"
+							alt=""
+							id="img-funcao"
+						/>
+						<p id="text-funcao">INICIADOR</p>
+					</div>
+
+					<!-- Lista de habilidades -->
+					<h2>Habilidades</h2>
+					<div id="habilidades">
+						<!-- Cada box = 1 habilidade -->
+						<div class="box-info">
+							<img src="..." alt="" id="img-hab1" />
+							<p id="text-hab1" class="txt-hab">WIGMAN</p>
+						</div>
+
+						<div class="box-info">
+							<img src="..." alt="" id="img-hab2" />
+							<p id="text-hab2" class="txt-hab">DIZZY</p>
+						</div>
+
+						<div class="box-info">
+							<img src="..." alt="" id="img-hab3" />
+							<p id="text-hab3" class="txt-hab">MOSH PIT</p>
+						</div>
+
+						<div class="box-info">
+							<img src="..." alt="" id="img-hab4" />
+							<p id="text-hab4" class="txt-hab">TRASH</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Scripts: lógica + ícones -->
+		<script src="JS/script.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/72ef3aac6d.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
